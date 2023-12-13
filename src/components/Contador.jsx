@@ -1,9 +1,12 @@
+import { useState } from "react"
+
 const Contador = () => {
+    const [numero,setNumero] = useState(10)
     return (
         <div className="text-center">
             <h3>Contador</h3>
-            <p>0</p>
-            <button className="btn btn-primary">+1</button>
+            <p>{numero}</p>
+            <button className="btn btn-primary" onClick={() => {setNumero(numero + 1)}}>+1</button>
         </div>
     );
 };
